@@ -148,10 +148,6 @@ I would like to thank Microverse Family and all my coding partners.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 ## 📝 License <a name="license"></a>
 
 This project is <a href="LICENSE">MIT</a> licensed.

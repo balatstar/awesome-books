@@ -1,4 +1,4 @@
-import { BookList } from './modules/bookList.js';
+import BookList from './modules/bookList.js';
 import { DateTime } from './modules/luxon.js';
 
 document.addEventListener('DOMContentLoaded', () => {
