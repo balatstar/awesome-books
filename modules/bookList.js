@@ -1,6 +1,6 @@
-import { Book } from './book.js';
+import Book from './book.js';
 
-export class BookList {
+export default class BookList {
   static loadBookSection() {
     const bookListSection = document.querySelector('.book-list-section');
     bookListSection.innerHTML = ''; // Clear the book list section
