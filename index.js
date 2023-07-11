@@ -1,4 +1,5 @@
 import { BookList } from './modules/bookList.js';
+import { DateTime } from './modules/luxon.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const bookListSection = document.querySelector('.book-list-section');
@@ -12,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   BookList.loadBookSection();
 });
+
+// Display current date/time
+const dateElement = document.querySelector('#date');
+const now = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+dateElement.textContent = now;
 
 // Menu functionality
 const addButton = document.querySelector('.add-btn');
