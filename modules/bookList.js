@@ -1,7 +1,7 @@
 import Book from './book.js';
 
 export default class BookList {
-  static loadBookSection() {
+  static loadBookSection = () => {
     const bookListSection = document.querySelector('.book-list-section');
     bookListSection.innerHTML = ''; // Clear the book list section
 
@@ -41,7 +41,7 @@ export default class BookList {
     }
   }
 
-  static openAddBookSection() {
+  static openAddBookSection = () => {
     const listButton = document.querySelector('.menu :nth-child(1) button');
     const addBookButton = document.querySelector('.menu :nth-child(3) button');
     const contactButton = document.querySelector('.menu :nth-child(5) button');
@@ -57,7 +57,7 @@ export default class BookList {
     contactSection.style.display = 'none';
   }
 
-  static openBookListSection() {
+  static openBookListSection = () => {
     const listButton = document.querySelector('.menu :nth-child(1) button');
     const addBookButton = document.querySelector('.menu :nth-child(3) button');
     const contactButton = document.querySelector('.menu :nth-child(5) button');
@@ -73,7 +73,7 @@ export default class BookList {
     contactSection.style.display = 'none';
   }
 
-  static openContactSection() {
+  static openContactSection = () => {
     const listButton = document.querySelector('.menu :nth-child(1) button');
     const addBookButton = document.querySelector('.menu :nth-child(3) button');
     const contactButton = document.querySelector('.menu :nth-child(5) button');
@@ -89,7 +89,7 @@ export default class BookList {
     contactSection.style.display = 'flex';
   }
 
-  static addBook() {
+  static addBook = () => {
     const titleInput = document.querySelector('#title');
     const authorInput = document.querySelector('#author');
     const bookDB = JSON.parse(localStorage.getItem('bookData')) || [];
@@ -104,7 +104,7 @@ export default class BookList {
     BookList.loadBookSection();
   }
 
-  static removeBook(id) {
+  static removeBook = (id) => {
     const bookDB = JSON.parse(localStorage.getItem('bookData')) || [];
     const newBookData = bookDB.filter((book) => book.id !== id);
     localStorage.setItem('bookData', JSON.stringify(newBookData));
